@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #1f0f0e;
+  --color-surface-dim: #1f0f0e;
+  --color-surface-bright: #483432;
+  --color-surface-container-lowest: #190a09;
+  --color-surface-container-low: #281716;
+  --color-surface-container: #2c1b1a;
+  --color-surface-container-high: #382524;
+  --color-surface-container-highest: #43302e;
+  --color-on-surface: #fbdbd8;
+  --color-on-surface-variant: #e5bdb9;
+  --color-inverse-surface: #fbdbd8;
+  --color-inverse-on-surface: #3f2c2a;
+  --color-outline: #ac8885;
+  --color-outline-variant: #5c403d;
+  --color-surface-tint: #ffb3ad;
+  --color-primary: #ffb3ad;
+  --color-on-primary: #680009;
+  --color-primary-container: #c1121f;
+  --color-on-primary-container: #ffd2ce;
+  --color-inverse-primary: #bd0d1d;
+  --color-secondary: #c6c6c7;
+  --color-on-secondary: #2f3131;
+  --color-secondary-container: #454747;
+  --color-on-secondary-container: #b4b5b5;
+  --color-tertiary: #c8c6c5;
+  --color-on-tertiary: #313030;
+  --color-tertiary-container: #616060;
+  --color-on-tertiary-container: #dedbdb;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-primary-fixed: #ffdad6;
+  --color-primary-fixed-dim: #ffb3ad;
+  --color-on-primary-fixed: #410003;
+  --color-on-primary-fixed-variant: #930011;
+  --color-secondary-fixed: #e2e2e2;
+  --color-secondary-fixed-dim: #c6c6c7;
+  --color-on-secondary-fixed: #1a1c1c;
+  --color-on-secondary-fixed-variant: #454747;
+  --color-tertiary-fixed: #e5e2e1;
+  --color-tertiary-fixed-dim: #c8c6c5;
+  --color-on-tertiary-fixed: #1c1b1b;
+  --color-on-tertiary-fixed-variant: #474646;
+  --color-background: #1f0f0e;
+  --color-on-background: #fbdbd8;
+  --color-surface-variant: #43302e;
+
+  /* Custom Font Families */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-headline: "Outfit", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+}
+
+/* High-Contrast Light Theme Overrides */
+.light {
+  --color-surface: #ffffff;
+  --color-surface-dim: #f3f4f6;
+  --color-surface-bright: #ffffff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f9fafb;
+  --color-surface-container: #f3f4f6;
+  --color-surface-container-high: #e5e7eb;
+  --color-surface-container-highest: #d1d5db;
+  --color-on-surface: #0f172a;
+  --color-on-surface-variant: #334155;
+  --color-inverse-surface: #0f172a;
+  --color-inverse-on-surface: #ffffff;
+  --color-outline: #64748b;
+  --color-outline-variant: #cbd5e1;
+  --color-surface-tint: #c1121f;
+  --color-primary: #c1121f;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #c1121f;
+  --color-on-primary-container: #ffffff;
+  --color-inverse-primary: #7f1d1d;
+  --color-secondary: #475569;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #f1f5f9;
+  --color-on-secondary-container: #1e293b;
+  --color-tertiary: #5c6f84;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #e2e8f0;
+  --color-on-tertiary-container: #0f172a;
+  --color-background: #f8fafc;
+  --color-on-background: #0f172a;
+  --color-surface-variant: #f1f5f9;
+}
+
+/* Glass panel light theme adjustment */
+.light .glass-panel {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+}
+
+.light .glass-panel-heavy {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+}
+
+/* Keep text readable on light mode when it has text-white classes */
+.light .text-white:not(.bg-primary-container *, .bg-primary *, .bg-primary-container, .bg-primary, .bg-emerald-500 *, .bg-emerald-500) {
+  color: #0f172a !important;
+}
+
+.light .text-white\/70:not(.bg-primary-container *, .bg-primary *, .bg-primary-container, .bg-primary, .bg-emerald-500 *, .bg-emerald-500) {
+  color: rgba(15, 23, 42, 0.7) !important;
+}
+
+.light .text-white\/80:not(.bg-primary-container *, .bg-primary *, .bg-primary-container, .bg-primary, .bg-emerald-500 *, .bg-emerald-500) {
+  color: rgba(15, 23, 42, 0.8) !important;
+}
+
+.light .text-white\/60:not(.bg-primary-container *, .bg-primary *, .bg-primary-container, .bg-primary, .bg-emerald-500 *, .bg-emerald-500) {
+  color: rgba(15, 23, 42, 0.6) !important;
+}
+
+.light .border-white\/5 {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+.light .border-white\/10 {
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+.light .bg-white\/5 {
+  background-color: rgba(15, 23, 42, 0.04) !important;
+}
+
+.light .bg-white\/10 {
+  background-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+.light .bg-surface-container-low {
+  background-color: #f1f5f9 !important;
+}
+
+/* Custom CSS classes for Glassmorphism and Animations */
+.glass-panel {
+  background: rgba(44, 27, 26, 0.45);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-heavy {
+  background: rgba(25, 10, 9, 0.85);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glow-primary {
+  box-shadow: 0 0 25px rgba(193, 18, 31, 0.45);
+}
+
+.glow-primary-hover:hover {
+  box-shadow: 0 0 30px rgba(193, 18, 31, 0.6);
+  transform: translateY(-2px);
+}
+
+.glow-soft-white {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+

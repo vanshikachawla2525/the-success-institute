@@ -1,0 +1,6 @@
+{
+  "name": "The Success Institute",
+  "description": "Premium coaching for Grades 7-12, Medical, Non-Medical, and Commerce with a full-featured Interactive Student Portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
